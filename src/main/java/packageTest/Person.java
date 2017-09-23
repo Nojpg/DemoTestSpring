@@ -1,3 +1,5 @@
+package packageTest;
+
 import org.joda.time.DateTime;
 
 /**
@@ -34,6 +36,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + '}';
+        return "asdasd.Person{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + '}';
     }
 }

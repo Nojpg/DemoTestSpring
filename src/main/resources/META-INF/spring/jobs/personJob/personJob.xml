@@ -38,7 +38,7 @@
     <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher"
           p:jobRepository-ref="jobRepository"/>
 
-    <bean id="stepExecutionListener" class="StepExecutionStatsListener"/>
+    <bean id="stepExecutionListener" class="packageTest.StepExecutionStatsListener"/>
 
     <bean id="itemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
         <property name="resource" value="classpath:/META-INF/spring/jobs/personJob/support/test-data.csv"/>
@@ -51,14 +51,14 @@
                 </property>
                 <property name="fieldSetMapper">
                     <bean class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
-                        <property name="targetType" value="Person"/>
+                        <property name="targetType" value="packageTest.Person"/>
                     </bean>
                 </property>
             </bean>
         </property>
     </bean>
 
-    <bean id="itemProcessor" class="PersonItemProcessor"/>
+    <bean id="itemProcessor" class="packageTest.PersonItemProcessor"/>
 
     <bean id="itemWriter" class="org.springframework.batch.item.database.JdbcBatchItemWriter">
         <property name="itemSqlParameterSourceProvider">
